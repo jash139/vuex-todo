@@ -24,7 +24,7 @@ export default {
   grid-gap: 1rem;
 }
 .todo {
-  background: #f5f6f7;
+  background: #cdcfcd;
   cursor: pointer;
   padding: 2rem;
   position: relative;

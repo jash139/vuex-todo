@@ -21,7 +21,7 @@ export default {
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.6;
-  background: #fec674;
+  background: #f3f4f5;
 }
 .container {
   max-width: 1100px;
