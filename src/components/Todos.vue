@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Todos</h2>
+    <h2 class="heading">Todos</h2>
     <div class="todos">
       <div v-for="todo in allTodos" :key="todo.id" class="todo">
         {{ todo.title }}
@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+.heading {
+  color: #fb5d06;
+}
 .todos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
