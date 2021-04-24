@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <h4>Filter Todos:</h4>
+    <select>
+      <option value="200">200</option>
+      <option value="100">100</option>
+      <option value="50">50</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "FilterTodos",
+};
+</script>
+
+<style scoped>
+select {
+  border: none;
+  margin-top: 20px;
+  padding: 0.5rem;
+}
+</style>
