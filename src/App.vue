@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
+      <AddTodo />
       <Todos />
     </div>
   </div>
@@ -8,18 +9,20 @@
 
 <script>
 import Todos from "./components/Todos.vue";
+import AddTodo from "./components/AddTodo.vue";
 
 export default {
   name: "App",
   components: {
     Todos,
+    AddTodo,
   },
 };
 </script>
 
 <style>
 body {
-  color: rgb(66, 66, 66);
+  color: rgb(102, 102, 102);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.6;
   background: #f3f4f5;
