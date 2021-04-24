@@ -1,4 +1,5 @@
 # vuex-todo
+A Todo app to learn vuex with vue for state management.
 
 ## Project setup
 ```
