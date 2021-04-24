@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Add Todo</h3>
+    <h2 class="heading">Add Todo</h2>
     <div class="add">
       <form @submit="onSubmit">
         <input type="text" v-model="title" placeholder="Todo" />
@@ -32,6 +32,12 @@ export default {
 </script>
 
 <style scoped>
+.heading {
+  color: #9f26f1;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
 form {
   display: flex;
 }
