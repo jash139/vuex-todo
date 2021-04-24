@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h4>Filter Todos:</h4>
+  <div class="filter-todos">
+    <h4 class="heading">Filter Todos:</h4>
     <select>
       <option value="200">200</option>
       <option value="100">100</option>
@@ -19,9 +19,17 @@ export default {
 </script>
 
 <style scoped>
+.filter-todos {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.heading {
+  color: #9f26f1;
+  margin-right: 2rem;
+}
 select {
   border: none;
-  margin-top: 20px;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 </style>
