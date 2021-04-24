@@ -7,7 +7,13 @@
       <span> <span class="complete-box" /> = Complete </span>
     </div>
     <div class="todos">
-      <div v-for="todo in allTodos" :key="todo.id" class="todo">
+      <div
+        @dblclick="onDblClick(todo)"
+        v-for="todo in allTodos"
+        :key="todo.id"
+        class="todo"
+        v-bind:class="{ 'is-completed': todo.completed }"
+      >
         {{ todo.title }}
         <i class="fas fa-trash-alt" @click="onClick(todo.id)" />
       </div>
@@ -20,9 +26,16 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Todos",
   methods: {
-    ...mapActions(["getTodos", "deleteTodo"]),
+    ...mapActions(["getTodos", "deleteTodo", "updateTodo"]),
     onClick(id) {
       this.deleteTodo(id);
+    },
+    onDblClick(todo) {
+      const updatedTodo = {
+        ...todo,
+        completed: !todo.completed,
+      };
+      this.updateTodo(updatedTodo);
     },
   },
   computed: mapGetters(["allTodos"]),
@@ -52,6 +65,10 @@ export default {
   position: relative;
   text-transform: capitalize;
 }
+.is-completed {
+  background: #ffffff57;
+  color: #7f4ba057;
+}
 i {
   padding: 0.6rem;
   border-radius: 10rem;
@@ -72,8 +89,8 @@ i:hover {
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  background: #7f4ba0;
-  opacity: 0.2;
+  background: white;
+  opacity: 0.57;
 }
 .incomplete-box {
   display: inline-block;

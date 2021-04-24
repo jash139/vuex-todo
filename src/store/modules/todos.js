@@ -24,13 +24,23 @@ const actions = {
     async filterTodos({ commit }, limit) {
         const response = await axios.get(`https://jsonplaceholder.typicode.com/todos?_limit=${limit}`);
         commit("setTodos", response.data);
+    },
+    async updateTodo({ commit }, updatedTodo) {
+        const response = await axios.put(`https://jsonplaceholder.typicode.com/todos/${updatedTodo.id}`, updatedTodo);
+        commit("updateTodo", response.data);
     }
 };
 
 const mutations = {
     setTodos: (state, todos) => state.todos = todos,
     newTodo: (state, todo) => (state.todos = [todo, ...state.todos]),
-    deleteTodo: (state, id) => state.todos = state.todos.filter(todo => todo.id !== id)
+    deleteTodo: (state, id) => state.todos = state.todos.filter(todo => todo.id !== id),
+    updateTodo: (state, updatedTodo) => {
+        const index = state.todos.findIndex(todo => todo.id === updatedTodo.id);
+        if (index !== -1) {
+            state.todos[index].completed = updatedTodo.completed;
+        }
+    }
 };
 
 export default {
