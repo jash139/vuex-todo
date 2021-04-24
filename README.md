@@ -1,5 +1,5 @@
 # vuex-todo
-A Todo app to learn vuex with vue for state management.
+A Todo app to learn vuex with vue for state management. The app uses JSONPlaceholder api.
 
 ## Project setup
 ```
