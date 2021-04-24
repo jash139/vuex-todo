@@ -25,7 +25,10 @@ export default {
 
 <style scoped>
 .heading {
-  color: #fb5d06;
+  color: #9f26f1;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 .todos {
   display: grid;
@@ -33,10 +36,11 @@ export default {
   grid-gap: 1rem;
 }
 .todo {
-  background: #cdcfcd;
+  background: #ffffff;
+  color: #7f4ba0;
   cursor: pointer;
   padding: 2rem;
   position: relative;
-  text-align: center;
+  text-transform: capitalize;
 }
 </style>

@@ -25,7 +25,7 @@ body {
   color: rgb(102, 102, 102);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.6;
-  background: #f3f4f5;
+  background: #d4daef;
 }
 .container {
   max-width: 1100px;
