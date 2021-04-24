@@ -1,6 +1,11 @@
 <template>
   <div>
     <h2 class="heading">Todos</h2>
+    <div class="legend">
+      <span>Double click to mark as complete</span>
+      <span> <span class="incomplete-box" /> = Incomplete </span>
+      <span> <span class="complete-box" /> = Complete </span>
+    </div>
     <div class="todos">
       <div v-for="todo in allTodos" :key="todo.id" class="todo">
         {{ todo.title }}
@@ -57,5 +62,28 @@ i {
 }
 i:hover {
   background-color: #a026f148;
+}
+.legend {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.complete-box {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: #7f4ba0;
+  opacity: 0.2;
+}
+.incomplete-box {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: #ffffff;
+}
+@media (max-width: 500px) {
+  .todos {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
