@@ -1,7 +1,7 @@
 # vuex-todo
 A Todo app to learn vue with vuex for state management. The app uses JSONPlaceholder api.
 
-Hosted website: [https://vue-vuex-todo.netlify.app/]
+Hosted website: [https://vue-vuex-todo.netlify.app]
 
 ## Project setup
 ```
